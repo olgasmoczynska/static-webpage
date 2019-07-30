@@ -1,209 +1,252 @@
-@import url('https://fonts.googleapis.com/css?family=Kreon|Ubuntu&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Kreon|Ubuntu&display=swap&subset=latin-ext");
 
-body, html {
-    color: #151313;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
-    font-family: 'Kreon', serif;
-    background-color: #ffffff;
-    scroll-behavior: smooth
-  }
+body,
+html {
+  color: #151313;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  font-family: "Kreon", serif;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  /* overflow na body żeby uniknąć poziomego scrolla*/
+  overflow-x: hidden;
+}
 
 .navigation {
-    background-color: rgba(228, 233, 237, 0.9);
-    padding: 12px 0;
-    position: fixed;
-    width: 100%; 
-    z-index: 9999;
-  }
+  background-color: rgba(228, 233, 237, 0.9);
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
 
 .navigation ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
 .navigation ul li {
-    display: inline-block;
-    margin-right: 20px;
-    font-family: 'Ubuntu', sans-serif;
-  }
+  display: inline-block;
+  margin-right: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
 
 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #36365b;
-    transition: all 0.5s;
-  }
+  text-decoration: none;
+  font-weight: bold;
+  color: #36365b;
+  transition: all 0.5s;
+}
 
 .navigation ul li a:hover {
-    background-color: #36365b;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-  }
+  background-color: #36365b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
 
 .splash {
-    background-image: url('https://i.postimg.cc/X48nkVGT/blank-composition-data-373076.jpg');
-    height: 280px;
-    width: 100%;
-    text-align: center;
-    padding-top: 465px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-  }
+  background-image: url("https://i.postimg.cc/X48nkVGT/blank-composition-data-373076.jpg");
+  height: 280px;
+  width: 100%;
+  text-align: center;
+  padding-top: 465px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
 
 .main-title {
-    margin: 0;
-    font-weight: bold;
-    font-size: 2.5rem;
-  }
+  margin: 0;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
 
 .main-subtitle {
-    margin-bottom: 40px;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
 .btn {
-    padding: 18px 24px 18px 24px;
-    background-color: #36365b;
-    color: #ffffff;
-    box-shadow: 5px 6px 20px #181e44;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 8px;
-    font-weight: normal;
-  }
+  padding: 18px 24px 18px 24px;
+  background-color: #36365b;
+  color: #ffffff;
+  box-shadow: 5px 6px 20px #181e44;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 8px;
+  font-weight: normal;
+}
 
 .btn:hover {
-    background-color: rgba(228, 233, 237);
-    color: #36365b;
-    border-color: #36365b;
-  }
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  background-color: rgba(228, 233, 237);
+  color: #36365b;
+  border-color: #36365b;
+}
 
 .skills-wrapper {
-    display: flex;
-    position: absolute;
-    right: 0;
-    width: 1241px;
-    justify-content: center;
-    background-color: #ffffff;
-    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.05);
-  }
+  display: flex;
+  width: 1241px;
+  z-index: 1;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.05);
+}
 
 .skills {
-    text-align: center;
-    margin-top: 15px;
-    width: 100%
-  }
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
 
 .skills i {
-    transition: 0.5s;
-  }
+  transition: 0.5s;
+}
 
 .skills i:hover {
-    transform: rotate(360deg);
-  }
+  transform: rotate(360deg);
+}
 
+/* tutaj używam flexa */
 .about {
-    width: 980px;
-    height: 370px;
-    background-color: rgba(228, 233, 237);
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 370px;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
+/* pseudoelement na 70% - dostosuj sobie pod siebie */
+.about::before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  /* do lewej */
+  left: 0;
+  background-color: rgba(228, 233, 237);
+}
+
+/* tutaj też tytuł na 70% - pamiętaj zmienić jak będziesz zmieniać before
+chodzi o to, żeby miał tyle samo co before żeby przy wyrównaniu do prawej
+wyświetlał się w dobrym miejscu  */
 .about-title {
-      margin-left: 30px;
-      color: #181443;
-      font-family: 'Ubuntu', sans-serif;
-  }
+  margin: 0;
+  padding: 15px;
+  padding-left: 30px;
+  width: 70%;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #181443;
+  font-family: "Ubuntu", sans-serif;
+}
 
 .lorem {
-    width: 1241px;
-    background-color: #ffffff;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.05);
-  }
+  width: 1241px;
+  background-color: #ffffff;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.05);
+}
 
 .about-content {
-    display: flex;
-    width: 1241px;
-  }
-  
+  display: flex;
+  width: 1241px;
+  z-index: 1;
+}
+
 .olga {
-    border-radius: 50%;
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-  }
+  border-radius: 50%;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
 
 .photo {
-    background-color: #ffffff;
-  }
+  background-color: #ffffff;
+}
 
+/* tutaj analogicznie do about */
 .skille {
-    width: 980px;
-    height: 370px;
-    background-color: rgba(228, 233, 237);
-    float: right;
-  }
+  width: 100%;
+  height: 370px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* używam flex-end żeby elementy były wyrównana do prawej */
+  align-items: flex-end;
+}
 
+/* też before analogicznie do about */
+.skille::before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  /* wyrównuje do prawej */
+  right: 0;
+  background-color: rgba(228, 233, 237);
+}
+
+/* tu to samo co w about - duplikujemy kod,
+możesz dać po prostu klasę "section-title" i zastosować ją tu i tu */
 .skills-title {
-      margin-left: 30px;
-      color: #181443;
-      font-family: 'Ubuntu', sans-serif;
-  }
+  margin: 0;
+  padding: 15px;
+  padding-left: 30px;
+  width: 70%;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #181443;
+  font-family: "Ubuntu", sans-serif;
+}
 
 .portfolio-title {
-    margin-left: 30px;
-    color: #181443;
-    font-family: 'Ubuntu', sans-serif;
-    width: 100%;
-    float: left;
-  }
+  margin-left: 30px;
+  color: #181443;
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+}
 
 .portfolio-wrapper {
-    float: left;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
 }
 
 .portfolio-item {
-    position: relative;
-    margin: 0;
-    flex: 0 0 25%;
-    max-width: 25%;
-    text-align: center;
+  position: relative;
+  margin: 0;
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
 }
 
 .portfolio-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio-item:before {
-    position: absolute;
-    display: none;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    opacity: 0.5;
+  position: absolute;
+  display: none;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5;
 }
 
-.portfolio-item:hover:before, .portfolio-item:hover {
-    display: block;
-  }
+.portfolio-item:hover:before,
+.portfolio-item:hover {
+  display: block;
+}
