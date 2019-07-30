@@ -7,14 +7,15 @@ body, html {
     margin: 0;
     font-family: 'Kreon', serif;
     background-color: #ffffff;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
 .navigation {
     background-color: rgba(228, 233, 237, 0.9);
     padding: 12px 0;
     position: fixed;
-    width: 100%; 
+    width: 100%;
     z-index: 9999;
   }
 
@@ -162,16 +163,18 @@ a {
       font-family: 'Ubuntu', sans-serif;
   }
 
+.portfolio {
+  clear: both;
+}
+
 .portfolio-title {
     margin-left: 30px;
     color: #181443;
     font-family: 'Ubuntu', sans-serif;
     width: 100%;
-    float: left;
   }
 
 .portfolio-wrapper {
-    float: left;
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0 0 0;
