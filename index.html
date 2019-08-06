@@ -17,26 +17,31 @@
           </ul>
         </div>
       </nav>
-      <section class="splash">
+      
+      <!-- tutaj można użyć znacznika header zamiast section-->
+      <header class="splash">
         <div class="page-intro">
           <h1 class="main-title">Welcome!</h1>
           <h2 class="main-subtitle">My name is Olga and I am a web developer.</h2>
           <a class="btn" href="#skille">See what I can do for you</a>
         </div>
-      </section>
+      </header>
+
       <section class="about" id="about">
-        <div class="container">
-          <h2 class="about-title">About me</h2>
-        </div>
+        <!-- tutaj tego diva 'container' w ogóle w sumie można wywalić -->
+        <h2 class="about-title">About me</h2>
+        <!-- jeżeli masz h2 w headerze całej strony jako podtytuł, to tutaj już sensownie
+          byłoby nadać h3 i następnej sekcji to samo, wtedy h3 -> h4 itd. -->
         <div class="about-content">
             <div class="photo"><img class="olga" src="https://i.postimg.cc/ZqjDL0b4/44234.png"></div>
             <div class="lorem"><p>Cupcake ipsum dolor sit amet tiramisu brownie sesame snaps. Jujubes ice cream pudding sweet roll. Sesame snaps dragée lemon drops cotton candy marshmallow caramels bonbon wafer gummi bears. Biscuit cake candy. Pie croissant sweet candy jujubes. Sugar plum wafer pudding cotton candy jujubes. Cotton candy tart sweet topping tart tootsie roll pie. Cupcake muffin soufflé lollipop cake. Liquorice candy jelly-o croissant. Cupcake lemon drops dessert marzipan pudding muffin. Biscuit sweet marshmallow. Cheesecake apple pie fruitcake toffee caramels marzipan powder lemon drops. Muffin bear claw cookie croissant pudding lemon drops powder wafer cake. Topping donut chupa chups dessert. Chocolate cake sugar plum gummi bears. Icing sesame snaps dessert pudding. Gummies fruitcake marshmallow lollipop apple pie tootsie roll. Candy sweet roll chocolate cake gummi bears candy canes jelly beans chocolate bar cheesecake. Marshmallow oat cake topping pie topping liquorice pudding chupa chups cake.</p></div>
         </div>
       </section>
+
+      <!-- tutaj przemyśl nazewnictwo klas, może po prostu sekcja skills a pojedyńczy article skill ?-->
       <section class="skille" id="skille">
-        <div class="container">
-          <h2 class="skills-title">My stack</h2>
-        </div>
+        <!-- tutaj tego diva 'container' tak samo wywalilam -->
+        <h2 class="skills-title">My stack</h2>
         <div class="skills-wrapper">
             <article class="skills">
                 <i class="fab fa-html5 fa-3x"></i>
@@ -56,9 +61,7 @@
         </div>
     </section>
     <section class="portfolio" id="portfolio">
-      
-          <h2 class="portfolio-title">Portfolio</h2>
-      
+      <h2 class="portfolio-title">Portfolio</h2>
       <div class="portfolio-wrapper">
             <figure class="portfolio-item">
         <img src="https://i.postimg.cc/wMpwyQ2j/adult-app-developer-coding-1181244.jpg" alt="Adult app developer coding"></figure>
@@ -70,7 +73,7 @@
              <img src="https://i.postimg.cc/9QxffJpc/adult-blur-business-2102416.jpg" alt="Adult blur business">
             </figure>
             <div>
-          </section>
+      </section>
     </section>
   </body>
 </html>
