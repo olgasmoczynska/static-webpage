@@ -18,7 +18,8 @@ The project was built with:
 * Pexels images
 
 ## Authors
-* Olga Smoczynska  
+* Olga Smoczynska
+
 See also the list of [contributors](https://github.com/olgasmoczynska/projekt1/contributors) who participated in this project.
         
 ## Acknowledgements
