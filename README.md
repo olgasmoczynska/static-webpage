@@ -7,7 +7,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Info
-This project is my first one-page website created in the summer 2019 as part of the Coders Camp web development camp organised by Coders Crew. The website is divided into four parts: About Me, Skills, Portfolio, and Contact.
+This project is my first one-page website created in the summer 2019 as part of the Coders Camp web development camp organised by Coders Crew. The website is divided into four parts: About, Skills, Portfolio, and Contact.
         
 ## Technologies
 The project was built with:
