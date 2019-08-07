@@ -9,7 +9,6 @@ html {
   font-family: "Kreon", serif;
   background-color: #ffffff;
   scroll-behavior: smooth;
-  /* overflow na body żeby uniknąć poziomego scrolla*/
   overflow-x: hidden;
 }
 
@@ -92,13 +91,15 @@ a {
   z-index: 1;
   justify-content: center;
   background-color: #ffffff;
-  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skills {
   text-align: center;
   margin-top: 15px;
   width: 100%;
+  margin-right: 15px;
+  margin-left: 5px;
 }
 
 .skills i {
@@ -109,7 +110,6 @@ a {
   transform: rotate(360deg);
 }
 
-/* tutaj używam flexa */
 .about {
   width: 100%;
   display: flex;
@@ -121,20 +121,15 @@ a {
   margin-top: 20px;
 }
 
-/* pseudoelement na 70% - dostosuj sobie pod siebie */
 .about::before {
   content: "";
   width: 70%;
   height: 100%;
   position: absolute;
-  /* do lewej */
   left: 0;
   background-color: rgba(228, 233, 237);
 }
 
-/* tutaj też tytuł na 70% - pamiętaj zmienić jak będziesz zmieniać before
-chodzi o to, żeby miał tyle samo co before żeby przy wyrównaniu do prawej
-wyświetlał się w dobrym miejscu  */
 .about-title {
   margin: 0;
   padding: 15px;
@@ -149,7 +144,7 @@ wyświetlał się w dobrym miejscu  */
 .lorem {
   width: 1241px;
   background-color: #ffffff;
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
@@ -170,7 +165,6 @@ wyświetlał się w dobrym miejscu  */
   background-color: #ffffff;
 }
 
-/* tutaj analogicznie do about */
 .skille {
   width: 100%;
   height: 370px;
@@ -178,23 +172,18 @@ wyświetlał się w dobrym miejscu  */
   position: relative;
   display: flex;
   flex-direction: column;
-  /* używam flex-end żeby elementy były wyrównana do prawej */
   align-items: flex-end;
 }
 
-/* też before analogicznie do about */
 .skille::before {
   content: "";
   width: 70%;
   height: 100%;
   position: absolute;
-  /* wyrównuje do prawej */
   right: 0;
   background-color: rgba(228, 233, 237);
 }
 
-/* tu to samo co w about - duplikujemy kod,
-możesz dać po prostu klasę "section-title" i zastosować ją tu i tu */
 .skills-title {
   margin: 0;
   padding: 15px;
@@ -254,4 +243,220 @@ możesz dać po prostu klasę "section-title" i zastosować ją tu i tu */
 .portfolio-item:hover:before,
 .portfolio-item:hover {
   display: block;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 550px;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.contact::before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(228, 233, 237);
+}
+
+.contact-title {
+  margin: 0;
+  padding: 15px;
+  padding-left: 30px;
+  width: 70%;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #181443;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contact-content {
+  display: flex;
+  width: 59.5%;
+  z-index: 1;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  width: 70%;
+  background-color: #ffffff;
+}
+
+.contact-info {
+  background-color: #ffffff;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#firstName {
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+#lastName {
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+#username {
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+textarea {
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+button {
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.social-links li a:hover {
+  background-color: #36365b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+form {
+  padding-top: 15px;
+  padding-bottom: 15px
+}
+
+button {
+  padding: 12px 18px 12px 18px;
+  font-family: "Ubuntu", sans-serif;
+  color: #36365b;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  h2 {
+
+    text-align: center;
+  }
+
+  .portfolio-title {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-content {
+    flex: 0 0 50%;
+    max-width: 100%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .about {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .about::before {
+    display: none;
+  }
+
+  .lorem {
+    box-shadow: none;
+    justify-items: center;
+    text-align: justify;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .skills-wrapper {
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
+
+  .skille {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .skille::before {
+    display: none;
+  }
+
+  .skille {
+    box-shadow: none;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .about-title {
+    width: 100%;
+  }
+
+  .skills-title {
+    width: 100%;
+  }
+
+  .contact-content {
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 15px;
+    box-shadow: none;
+  }
+
+  .contact {
+    height: auto;
+    margin-bottom: 20px;
+    justify-items: center;
+    text-align: center;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact::before {
+    display: none;
+  }
+
+  .form {
+    box-shadow: none;
+  }
+
+  textarea {
+    max-width: 145px;
+  }
+
+  .contact-title {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+  }
 }
