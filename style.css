@@ -355,7 +355,7 @@ button {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .portfolio-item {
     flex: 0 0 50%;
     max-width: 50%;
